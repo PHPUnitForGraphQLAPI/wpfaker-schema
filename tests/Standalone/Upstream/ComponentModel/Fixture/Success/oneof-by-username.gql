@@ -1,6 +1,0 @@
-query {
-  user(by: {username: "admin"}) {
-    id
-    name
-  }
-}
