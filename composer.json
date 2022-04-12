@@ -1,5 +1,5 @@
 {
-    "name": "graphql-api/wpfaker-schema",
+    "name": "phpunit-for-graphql-api/wpfaker-schema",
     "conflict": {
         "getpop/modulerouting": "<0.8.9",
         "getpop/loosecontracts": "<0.8.9",
@@ -152,9 +152,9 @@
         "pop-wp-schema/schema-commons": "<0.8.9"
     },
     "type": "library",
-    "description": "Convert Markdown to HTML",
-    "keywords": ["GraphQL", "PHP", "PoP", "markdown-convertor"],
-    "homepage": "https://github.com/GraphQLAPI/markdown-convertor",
+    "description": "Mock the WordPress schema when running PHPUnit tests",
+    "keywords": ["GraphQL", "PHP", "PoP", "wpfaker", "phpunit"],
+    "homepage": "https://github.com/PHPUnitForGraphQLAPI/graphql-api-for-wp",
     "license": "GPL-2.0-or-later",
     "authors": [
         {
@@ -165,29 +165,30 @@
     ],
     "require": {
         "php": "^8.1",
-        "getpop/engine": "^0.9"
-    },
-    "require-dev": {
-        "leoloso/faker": "dev-master",
-        "phpstan/phpstan": "^1.4",
-        "phpunit/phpunit": "^9.5",
-        "pop-backbone/wp-data-parser": "^0.9",
+        "phpunit-for-graphql-api/wpfaker-schema": "^0.9",
         "pop-wp-schema/users": "^0.9",
+        "pop-wp-schema/pages": "^0.9",
         "pop-wp-schema/posts": "^0.9",
         "pop-wp-schema/comments": "^0.9",
+        "pop-cms-schema/comment-mutations-wp": "^0.9",
         "pop-cms-schema/post-categories-wp": "^0.9",
         "pop-cms-schema/post-tags-wp": "^0.9",
+        "pop-cms-schema/user-state-mutations-wp": "^0.9"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.4",
+        "phpunit/phpunit": "^9.5",
         "rector/rector": "^0.12",
         "squizlabs/php_codesniffer": "^3.6"
     },
     "autoload": {
         "psr-4": {
-            "GraphQLAPI\\WPFakerSchema\\": "src"
+            "PHPUnitForGraphQLAPI\\GraphQLAPI\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "GraphQLAPI\\WPFakerSchema\\": "tests"
+            "PHPUnitForGraphQLAPI\\GraphQLAPI\\": "tests"
         }
     },
     "scripts": {

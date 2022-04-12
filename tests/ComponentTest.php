@@ -1,6 +1,6 @@
 <?php
 
-namespace GraphQLAPI\WPFakerSchema;
+namespace PHPUnitForGraphQLAPI\GraphQLAPI;
 
 use PoP\Root\AbstractComponentTest;
 
