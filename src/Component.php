@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-namespace PHPUnitForGraphQLAPI\GraphQLAPIPRO;
+namespace PHPUnitForGraphQLAPI\WPFakerSchema;
 
 use PoP\Root\Component\AbstractComponent;
+use PoP\Root\Environment;
 
 /**
  * Initialize component
@@ -19,7 +20,12 @@ class Component extends AbstractComponent
     public function getDependedComponentClasses(): array
     {
         return [
-            \PHPUnitForGraphQLAPI\WPFakerSchema\Component::class,
+            \PoP\Engine\Component::class,
         ];
+    }
+
+    protected function resolveEnabled(): bool
+    {
+        return Environment::isApplicationEnvironmentDevPHPUnit();
     }
 }

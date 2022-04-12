@@ -1,4 +1,4 @@
-# WPFaker PHPUnit tests for the GraphQL API for WordPress
+# WP Faker Schema (for PHPUnit)
 
 <!--
 [![Build Status][ico-travis]][link-travis]
@@ -9,7 +9,7 @@
 [![Total Downloads][ico-downloads]][link-downloads]
 -->
 
-Mock the WordPress schema when running PHPUnit tests
+Utilities to execute PHPUnit for the GraphQL API for WordPress
 
 ## Install
 
@@ -21,7 +21,7 @@ composer require phpunit-for-graphql-api/wpfaker-schema
 
 ## Development
 
-The source code is hosted on the [PoP monorepo](https://github.com/leoloso/PoP), under [`GraphQLAPI/phpunit-packages/wpfaker-schema`](https://github.com/leoloso/PoP/tree/master/layers/GraphQLAPI/phpunit-packages/wpfaker-schema).
+The source code is hosted on the [PoP monorepo](https://github.com/leoloso/PoP), under [`GraphQLAPIForWP/phpunit-packages/wpfaker-schema`](https://github.com/leoloso/PoP/tree/master/layers/GraphQLAPIForWP/phpunit-packages/wpfaker-schema).
 
 ## Usage
 
