@@ -6,13 +6,14 @@ namespace PHPUnitForGraphQLAPI\WPFakerSchema\State;
 
 use Brain\Faker\Providers;
 use Faker\Generator;
-
-use function Brain\faker;
-use function Brain\Monkey\Functions\expect;
-
+use Mockery;
 use PHPUnitForGraphQLAPI\WPFakerSchema\Exception\DatasetFileException;
 use PHPUnitForGraphQLAPI\WPFakerSchema\MockFunctions\WordPressMockFunctionContainer;
 use PoPBackbone\WPDataParser\WPDataParser;
+
+use function Brain\faker;
+use function Brain\Monkey\Functions\expect;
+use function Brain\Monkey\Functions\stubEscapeFunctions;
 
 class MockDataStore
 {
@@ -217,12 +218,12 @@ class MockDataStore
      */
     protected function mockFunctions(): void
     {
-        expect('get_option')
-            ->with('date_format', \Mockery::any())
-            ->andReturn('Y-m-d');
+        // Stub `esc_sql`
+        stubEscapeFunctions();
 
-        expect('esc_sql')
-            ->andReturnFirstArg();
+        expect('get_option')
+            ->with('date_format', Mockery::any())
+            ->andReturn('Y-m-d');
 
         $wpMockFunctionContainer = new WordPressMockFunctionContainer();
 
