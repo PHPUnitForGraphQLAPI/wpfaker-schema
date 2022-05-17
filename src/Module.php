@@ -4,23 +4,18 @@ declare(strict_types=1);
 
 namespace PHPUnitForGraphQLAPI\WPFakerSchema;
 
-use PoP\Root\Component\AbstractComponent;
+use PoP\Root\Module\AbstractModule;
 use PoP\Root\Environment;
 
-/**
- * Initialize component
- */
-class Component extends AbstractComponent
+class Module extends AbstractModule
 {
     /**
-     * Classes from PoP components that must be initialized before this component
-     *
      * @return string[]
      */
-    public function getDependedComponentClasses(): array
+    public function getDependedModuleClasses(): array
     {
         return [
-            \PoP\Engine\Component::class,
+            \PoP\Engine\Module::class,
         ];
     }
 
