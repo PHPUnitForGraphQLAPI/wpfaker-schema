@@ -21,7 +21,7 @@ use function Brain\Monkey\Functions\stubEscapeFunctions;
 use function Brain\Monkey\setUp;
 use function Brain\Monkey\tearDown;
 
-abstract class AbstractWPFakerFixtureQueryExecutionGraphQLServerTest extends AbstractFixtureQueryExecutionGraphQLServerTestCase
+abstract class AbstractWPFakerFixtureQueryExecutionGraphQLServerTestCase extends AbstractFixtureQueryExecutionGraphQLServerTestCase
 {
     use MockeryPHPUnitIntegration;
 
